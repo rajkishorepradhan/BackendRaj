@@ -13,20 +13,20 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// mongoose.connect(
-//     process.env.MONGO_URI,
-//     {
-//       useNewUrlParser: true,
-//       useUnifiedTopology: true,
+mongoose.connect(
+    process.env.MONGO_URI,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
       
-//     },
-//     (err) => {
-//       if (err){
-//         console.log('error:------------',err)
-//       }
-//       console.log("mongdb is connected");
-//     }
-//   );
+    },
+    (err) => {
+      if (err){
+        console.log('error:------------',err)
+      }
+      console.log("mongdb is connected");
+    }
+  );
 
 
 app.get('/api/products', (req, res) => {
