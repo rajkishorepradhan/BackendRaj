@@ -6,13 +6,14 @@ import Product from './models/product.js';
 import cors from 'cors';
 import 'dotenv/config';
 import mongoose  from 'mongoose';
+import router from './routes/productRoutes.js';
 // import seederScript from './seederScript.js';
 connectDB();
+
 const app = express();
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
 // mongoose.connect(
 //     process.env.MONGO_URI,
 //     {
@@ -29,33 +30,36 @@ app.use(express.json());
 //   );
 
 
-app.get('/api/products', (req, res) => {
-    res.send(data.products);
-})
+// app.get('/api/products', (req, res) => {
+//     res.send(data.products);
+// })
+app.use('/products',router )
 
-app.post('/api/products', async(req, res) => {
-    const payload= req.body;
-    try{
+// app.use("api/products",productRoutes);
+
+// app.post('/api/products', async(req, res) => {
+//     const payload= req.body;
+//     try{
 
 
-        const newProduct = new Product({
-            name:"Nike Slim Shirt",
-            catagory: "Shirts",
-            description: "high quality product",
-            price: "120",
-            countInStock: "10",
-            imageUrl: "https://avatars.dicebear.com/api/human/1.svg",
-          });
+//         const newProduct = new Product({
+//             name:"Nike Slim Shirt",
+//             catagory: "Shirts",
+//             description: "high quality product",
+//             price: "120",
+//             countInStock: "10",
+//             imageUrl: "https://avatars.dicebear.com/api/human/1.svg",
+//           });
       
-          const product = await newProduct.save();
-          res.status(200).json(product);
+//           const product = await newProduct.save();
+//           res.status(200).json(product);
 
-    } catch (error){
-        console.log(error);
-        return res.status(400).json(error);
+//     } catch (error){
+//         console.log(error);
+//         return res.status(400).json(error);
 
-    }
-})
+//     }
+// })
 
 app.get('/', (req, res) => {
     res.send('Server is ready');
