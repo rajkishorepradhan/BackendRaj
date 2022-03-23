@@ -2,9 +2,99 @@
 const data = {
   products: [
     {
-      _id: '1',
+      
       name: 'Nike Slim Shirt',
       catagory: 'Shirts',
+      description: 'high quality product',
+      price: 120,
+      countInStock: 10,
+      imageUrl: '../assets/dalmamasala.JPG'
+    },
+    {
+     
+      name: 'Tomato Kapada',
+      catagory: 'Papad',
+      description: 'high quality product',
+      price: 120,
+      countInStock: 10,
+      imageUrl: '../assets/dalmamasala.JPG'
+    },
+    {
+     
+      name: 'Chicken Masala',
+      catagory: 'Masala',
+      description: 'high quality product',
+      price: 120,
+      countInStock: 10,
+      imageUrl: '../assets/dalmamasala.JPG'
+    },
+    {
+      
+      name: 'Phula Badi',
+      catagory: 'Badi',
+      description: 'high quality product',
+      price: 120,
+      countInStock: 10,
+      imageUrl: '../assets/dalmamasala.JPG'
+    },
+    {
+   
+      name: 'superFood',
+      catagory: 'Shirts',
+      description: 'high quality product',
+      price: 120,
+      countInStock: 10,
+      imageUrl: '../assets/dalmamasala.JPG'
+    },
+    {
+     
+      name: 'Organic Powder',
+      catagory: 'Shirts',
+      description: 'high quality product',
+      price: 120,
+      countInStock: 10,
+      imageUrl: '../assets/dalmamasala.JPG'
+    },
+    {
+     
+      name: 'lia badi',
+      catagory: 'Shirts',
+      description: 'high quality product',
+      price: 120,
+      countInStock: 10,
+      imageUrl: '../assets/dalmamasala.JPG'
+    },
+    {
+      
+      name: 'Nike ',
+      catagory: 'Shirts',
+      description: 'high quality product',
+      price: 120,
+      countInStock: 10,
+      imageUrl: '../assets/dalmamasala.JPG'
+    },
+    {
+      
+      name: 'Papad ',
+      catagory: 'Papad',
+      description: 'high quality product',
+      price: 120,
+      countInStock: 10,
+      imageUrl: '../assets/dalmamasala.JPG'
+    },
+    {
+      
+      name: 'Meat Masala ',
+      catagory: 'Masala',
+      description: 'high quality product',
+      price: 120,
+      countInStock: 10,
+      imageUrl: '../assets/dalmamasala.JPG'
+    },
+    {
+      
+      name: 'Pant ',
+      catagory: 'dress',
       description: 'high quality product',
       price: 120,
       countInStock: 10,

@@ -31,7 +31,7 @@ app.use(express.json());
 //   );
 
 
-app.use('/product',productRoute)
+app.use('/api/products',productRoute)
 app.get('/', (req, res) => {
     res.send('Server is ready');
 });
