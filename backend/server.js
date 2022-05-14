@@ -1,0 +1,33 @@
+const app = require('./app');
+const connectDatabase = require("./config/database");
+const dotenv = require("dotenv");
+const { $where } = require("./models/productModel");
+
+
+//handling Uncaugt Execption 
+
+process.on("uncaughtException",(err)=>{
+  console.log(`Error: ${err.messaage}`);
+  console.log(`Shutting down the server due tohandling Uncaugt Execption `)
+  process.exit(1);
+})
+
+//config
+dotenv.config({path:"backend/config/config.env"});
+// connect to data base 
+connectDatabase();
+
+const server = app.listen(process.env.PORT, () => {
+    console.log(`Server is working on http://localhost:${process.env.PORT}`);
+  });
+  
+
+
+  //unhandle Promise Rejection 
+  process.on("unhandledRejection",err =>{
+    console.log(`Error: ${err.message}`);
+    console.log(`Shutting down the server due to unhandle Promise Rejection`);
+    server.close(()=>{
+      process.exit(1);
+    });
+  });
